@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>OLIVEIRA TRADE - CADASTRE-SE</title>
+<link rel="stylesheet" href="css/styleLoginAndRegister.css">
+</head>
+<body>
+	<div class="form-wrap">	                   
+		<div class="marca">			
+			<h2>Oliveira Trade</h2>
+	        <p>A escolha certa!</p>
+	    </div>
+	</div>
+	
+	<div class="form-wrap">                                          
+		<div class="tabs">
+			<h3 class="login-tab"><a href="#login-tab-content">Cadastro</a></h3>
+		</div>
+	         	      
+		<div class="tabs-content">
+			<div id="signup-tab-content" class="active">
+				<form class="signup-form" action="/register" method="post" th:object="${registerRequest}">
+					<input type="email" class="input" name="email" id="email" autocomplete="off" placeholder="Email">
+					<input type="text" class="input" name="login" id="login" autocomplete="off" placeholder="Usuario">
+					<input type="password" class="input" name="password" id="password" autocomplete="off" placeholder="Senha">
+					<input type="submit" class="button" value="Sign Up">
+				</form>
+				<div class="help-text">
+					<p>Já tem uma conta?<a href="login"> Login!</a></p>					
+				</div>
+	        </div>
+		</div>
+	</div>
+ 
+</body>
+</html>

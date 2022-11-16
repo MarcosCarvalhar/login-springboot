@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>OLIVEIRA TRADE - LOGIN</title>
+<link rel="stylesheet" href="css/styleLoginAndRegister.css">
+</head>
+<body>	
+	<div class="form-wrap">                    
+		<div class="marca">		
+			<h2>Oliveira Trade</h2>
+       		<p>A escolha certa!</p>
+    	</div>
+	</div>
+	
+	<div class="form-wrap">	
+		<div class="tabs">
+			<h3 class="login-tab"><a href="#login-tab-content">Login</a></h3>
+		</div>
+         
+        <div class="tabs-content">
+			<div id="signup-tab-content" class="active">
+				<form class="signup-form" action="/login" method="post" th:object="${loginRequest}">
+					<input type="text" name="login" class="input" id="login" autocomplete="off" placeholder="Usuario">
+					<input type="password" name="password" class="input" id="password" autocomplete="off" placeholder="Senha">					
+					<input type="submit" name="sign-in" class="button" value="Login">
+				</form>
+				<div class="help-text">
+					<p>Não tem uma conta?<a href="register"> Cadastre-se!</a></p>					
+				</div>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>
